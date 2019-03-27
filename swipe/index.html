@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .imgList ul {
+            margin: 0;
+            padding: 0;
+            list-style: none; /* 清除ul默认样式 */
+            position: relative;
+            overflow: hidden;
+            margin: 80px 30px;
+            width: 600px;
+            height: 400px;
+        }
+        .imgList ul li img {
+            width: 300px;
+            height: 400px;
+            position: absolute;
+            transition: 0.3s;
+        }
+        .li1 {
+            transform: translateX(0) scale(0.8);
+            transform-origin: 0% 100%; /* 以左下角为缩放原点 */
+            z-index: 1;
+        }
+        .li2 {
+            transform: translateX(150px);
+            z-index: 2;
+        }
+        .li3 {
+            transform: translateX(300px) scale(0.8);
+            transform-origin: 100% 100%; /* 以右下角为缩放原点 */
+            z-index: 1;
+        }
+        .li4 {
+            transform: translateX(300px) scale(0.8);
+            transform-origin: 100% 100%;
+            z-index: 0;
+        }
+        .li5 {
+            transform: translateX(0) scale(0.8);
+            transform-origin: 0% 100%;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="imgList">
+        <ul>
+            <li><img src="images/1.jpg" alt="1" class="li1"></li>
+            <li><img src="images/2.jpg" alt="2" class="li2"></li>
+            <li><img src="images/3.jpg" alt="3" class="li3"></li>
+            <li><img src="images/4.jpg" alt="4" class="li4"></li>
+            <li><img src="images/5.jpg" alt="5" class="li5"></li>
+        </ul>
+    </div>
+    <script>
+        let imgArr = document.querySelectorAll("li img");
+        let arr = ["li1", "li2", "li3", "li4", "li5"];
+        let ul = document.getElementsByTagName("ul")[0];
+        
+        // 事件委托在ul元素上
+        ul.addEventListener("click", (e)=>{
+            if(e.target.getAttribute("class") === "li1") {
+                arr.push(arr[0]);
+                arr.shift(arr[0]);
+                for(let i = 0; i < arr.length; i++) {
+                    imgArr[i].setAttribute("class", arr[i]);
+                }
+            }else if(e.target.getAttribute("class") === "li3") {
+                arr.unshift(arr[4]);
+                arr.pop(arr[4]);
+                for(let i = 0; i < arr.length; i++) {
+                    imgArr[i].setAttribute("class", arr[i]);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
