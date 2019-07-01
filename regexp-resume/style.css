@@ -1,0 +1,53 @@
+.container {
+    width: 60%;
+    margin: 64px auto;
+}
+
+h1 {
+    font-size: 32px;
+    width: 160px;
+    height: 64px;
+    line-height: 64px;
+    background: #ec6738;
+    margin: 0 auto;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.resume-item {
+    background: #fff;
+    padding: 32px;
+    border: 1px solid #ddd;
+    border-left: 4px solid #ec6738;
+    margin-bottom: 32px;
+}
+
+.resume-base .input-item {
+    margin-bottom: 32px;
+    margin-left: 32px;
+}
+
+.orange {
+    color: #ec6738;
+    font-size: 20px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.input-text {
+    outline: none;
+    width: 320px;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 8px;
+    border: 1px solid #ddd;
+}
