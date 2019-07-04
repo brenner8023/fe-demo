@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>轮播图</title>
+    <style>
+        /* 修改默认样式 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+
+        .wrap {
+            position: relative;
+            width: 600px;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+        /* 选项的样式 */
+        .options {
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 30px;
+            text-align: center;
+            margin-right: 10px;
+            background: orange;
+            cursor: pointer;
+        }
+        .options:hover {
+            background: darkkhaki;
+        }
+
+        /* 轮播图的样式 */
+        .slide {
+            width: 300%;
+            height: 400px;
+            text-align: center;
+            font-size: 100px;
+            line-height: 400px;
+            margin-top: 20px;
+            animation: slide1 4s infinite;
+        }
+        .slide li {
+            float: left;
+            width: 600px;
+            height: 400px;
+        }
+        .slide li:nth-of-type(1) {
+            background: deeppink;
+        }
+        .slide li:nth-of-type(2) {
+            background: dodgerblue;
+        }
+        .slide li:nth-of-type(3) {
+            background: deepskyblue;
+        }
+        
+        /* 设置三种轮播效果 */
+        @keyframes slide1 {
+            0% {
+                margin-left: 0;
+            }
+            20% {
+                margin-left: 0;
+            }
+            40% {
+                margin-left: -600px;
+            }
+            60% {
+                margin-left: -600px;
+            }
+            80% {
+                margin-left: -1200px;
+            }
+            90% {
+                margin-left: -1200px;
+            }
+            100% {
+                margin-left: 0;
+            }
+        } 
+        @keyframes slide2 {
+            0% {
+                margin-left: -600px;
+            }
+            20% {
+                margin-left: -600px;
+            }
+            40% {
+                margin-left: -1200px;
+            }
+            60% {
+                margin-left: -1200px;
+            }
+            80% {
+                margin-left: 0px;
+            }
+            90% {
+                margin-left: 0px;
+            }
+            100% {
+                margin-left: -600px;
+            }
+        }
+        @keyframes slide3 {
+            0% {
+                margin-left: -1200px;
+            }
+            20% {
+                margin-left: -1200px;
+            }
+            40% {
+                margin-left: 0;
+            }
+            60% {
+                margin-left: 0;
+            }
+            80% {
+                margin-left: -600px;
+            }
+            90% {
+                margin-left: -600px;
+            }
+            100% {
+                margin-left: -1200px;
+            }
+        }
+
+        /* 当选项获得焦点时, 修改动画效果的名字 */
+        #option1:focus ~ .slide {
+            animation-name: slide1;
+        }
+        #option2:focus ~ .slide {
+            animation-name: slide2;
+        }
+        #option3:focus ~ .slide {
+            animation-name: slide3;
+        }
+        /* 当鼠标点击选项未松开时, 暂时取消动画轮播效果 */
+        #option1:active ~ .slide {
+            animation-name: none;
+            margin-left: 0;
+        }
+        #option2:active ~ .slide {
+            animation-name: none;
+            margin-left: -600px;
+        }
+        #option3:active ~ .slide {
+            animation-name: none;
+            margin-left: -1200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <!-- 选项 -->
+        <span tabindex="-1" id="option1" class="options">1</span>
+        <span tabindex="-1" id="option2" class="options">2</span>
+        <span tabindex="-1" id="option3" class="options">3</span>
+        <!-- 轮播图 -->
+        <ul class="slide">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>    
+</body>
+</html>
