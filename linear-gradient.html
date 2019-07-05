@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css线性渐变</title>
+    <style>
+        .test1 {
+            width: 200px;
+            height: 200px;
+            font: 14px/20px '黑体';
+            text-indent: 2em;
+            background-image: repeating-linear-gradient(#f9f9f9, #f9f9f9 9%, #ccc 10%);
+        }
+
+        .test2 {
+            width: 100px;
+            height: 100px;
+            background-image: linear-gradient(45deg, red 25%, transparent 25%, transparent 75%, red 75%), linear-gradient(-45deg, red 25%, transparent 25%, transparent 75%, red 75%);
+            background-size: 25% 25%;
+        }
+    </style>
+</head>
+<body>
+    <p class="test1">我是特别长的特别长的特别长的特别长的特别长的特别长的特别长的特别长的测试文字</p>
+
+    <div class="test2"></div>
+
+    <!-- 
+# 谈谈css的线性渐变linear-gradient
+渐变实际上是两种或多种颜色之间的平滑过渡. 而线性渐变是多种颜色沿着一条直线过渡. 这条直线称为渐变线. 线性渐变的实现由两部分组成: 渐变线和色标. 渐变线用来控制发生渐变的方向, 色标包含一个颜色值和一个位置, 用来控制渐变的颜色变化.
+
+## 参数
+linear-gradient的第一个参数用于指定渐变线, 默认是to bottom
+
+使用关键字
+- to top
+- to right
+- to bottom
+- to left
+- to top left
+- to top right
+- to bottom left
+- to bottom right
+
+第二种方式是使用角度
+
+## 色标
+必须设置至少两个色标, 色标由颜色和位置组成, 必须颜色在前, 位置在后.
+background-image: linear-gradient(red 0%, blue 100%);
+
+## 重复渐变
+repeating-linear-gradient
+重复渐变可以实现线性渐变的重复效果, 只有当颜色位置不在0%或100%时, 重复渐变才生效
+     -->
+</body>
+</html>
