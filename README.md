@@ -1,6 +1,12 @@
 # fe-demo
 练手的demo
 ## 目录
+前端技术面试文档
+- [地址](https://github.com/brenner8023/u-r-fe-noob)
+
+广东工业大学导航
+- [地址](https://github.com/brenner8023/gdut-nav)
+
 纯css实现的轮播动画效果:
 - [查看效果](https://brenner8023.github.io/fe-demo/slide.html)
 - [源代码](./slide.html)
