@@ -11,6 +11,9 @@
 - [查看效果](https://brenner8023.github.io/fe-demo/slide.html)
 - [源代码](./slide.html)
 
+前端简历:
+- [查看效果](https://brenner8023.github.io/fe-demo/vue-resume/index.html)
+
 具有翻页动画效果的生日贺卡
 - [查看效果](https://brenner8023.github.io/birthday-card/index.html)
 - [源代码](https://github.com/brenner8023/birthday-card)
