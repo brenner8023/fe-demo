@@ -14,6 +14,10 @@
 前端简历:
 - [查看效果](https://brenner8023.github.io/fe-demo/vue-resume/index.html)
 
+纯CSS实现任意百分比饼图:
+- [查看效果](https://brenner8023.github.io/fe-demo/pieChart.html)
+- [源代码](./pieChart.html)
+
 具有翻页动画效果的生日贺卡
 - [查看效果](https://brenner8023.github.io/birthday-card/index.html)
 - [源代码](https://github.com/brenner8023/birthday-card)
