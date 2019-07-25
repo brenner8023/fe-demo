@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css实现钟摆效果</title>
+    <style>
+        .container {
+            width: 300px;
+            height: 300px;
+            border: 1px solid;
+        }
+        .clock {
+            width: 2px;
+            height: 100px;
+            background: #ccc;
+            margin: 0 auto;
+            position: relative;
+            animation: clock 4s infinite;
+            animation-timing-function: linear;
+            transform-origin: 50% 0%;
+        }
+
+        .clock::after {
+            content: '';
+            display: block;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: darkred;
+            position: absolute;
+            bottom: -26px;
+            left: -13px;
+        }
+
+        @keyframes clock {
+            0% {
+                transform: rotate(0deg);
+            }
+            
+            25% {
+                transform: rotate(60deg);
+            }
+            
+            50% {
+                transform: rotate(0deg);
+            }
+            
+            75% {
+                transform: rotate(-60deg);
+            }
+        
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="clock"></div>
+    </div>
+</body>
+</html>

@@ -18,6 +18,10 @@
 - [查看效果](https://brenner8023.github.io/fe-demo/pieChart.html)
 - [源代码](./pieChart.html)
 
+纯CSS实现钟摆效果:
+- [查看效果](https://brenner8023.github.io/fe-demo/clock.html)
+- [源代码](./clock.html)
+
 具有翻页动画效果的生日贺卡
 - [查看效果](https://brenner8023.github.io/birthday-card/index.html)
 - [源代码](https://github.com/brenner8023/birthday-card)
