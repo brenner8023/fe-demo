@@ -18,6 +18,10 @@
 - [查看效果](https://brenner8023.github.io/fe-demo/pieChart.html)
 - [源代码](./pieChart.html)
 
+2048游戏
+- [查看效果](https://brenner8023.github.io/fe-demo/mc-2048/index.html)
+- [源代码](https://github.com/brenner8023/mc-2048)
+
 纯CSS实现钟摆效果:
 - [查看效果](https://brenner8023.github.io/fe-demo/clock.html)
 - [源代码](./clock.html)
